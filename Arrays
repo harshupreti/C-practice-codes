@@ -1,22 +1,28 @@
 Question 1: //WAP in C to find second largest element of an array
 
 #include <stdio.h>
-
+#include <limits.h>
 int main()
 {
-    int a[5];
+    int a[100],n;
+    printf("enter number of elements: ");
+    scanf("%d",&n);
     printf("enter elements of array : ");
-    for(int i=0;i<5;i++)
+    for(int i=0;i<n;i++)
     {
         scanf("%d",&a[i]);
     }
-    int second =a[0], largest = a[0];
-    for(int i=0;i<5;i++)
+    int second = INT_MIN,largest = INT_MIN;
+    for(int i=0;i<n;i++)
     {
         if(a[i]>largest)
         {
             second = largest;
             largest = a[i];
+        }
+        else if(a[i]>second && a[i]<largest)
+        {
+            second = a[i];
         }
     }
     printf("second largest element is : %d",second);
@@ -30,14 +36,16 @@ Question 2: //WAP in C to count even and odd numbers
 
 int main()
 {
-    int a[5];
+    int a[100],n;
+    printf("enter number of elements: ");
+    scanf("%d",&n);
     printf("enter elements of array : ");
-    for(int i=0;i<5;i++)
+    for(int i=0;i<n;i++)
     {
         scanf("%d",&a[i]);
     }
     int c1=0,c2=0;
-    for(int i=0;i<5;i++)
+    for(int i=0;i<n;i++)
     {
         if(a[i]%2==0)
         {
@@ -59,14 +67,16 @@ Question 3: //WAP in C to count positive,negative and zeros in a 1d array
 
 int main()
 {
-    int a[5];
+    int a[100],n;
+    printf("enter number of elements: ");
+    scanf("%d",&n);
     printf("enter elements of array : ");
-    for(int i=0;i<5;i++)
+    for(int i=0;i<n;i++)
     {
         scanf("%d",&a[i]);
     }
     int c1=0,c2=0,c3=0;
-    for(int i=0;i<5;i++)
+    for(int i=0;i<n;i++)
     {
         if(a[i]>0)
         {
@@ -122,32 +132,34 @@ Question 5: //WAP in C to swap elements of 2 1d arrays
 
 int main()
 {
-    int a[5],b[5];
+    int a[100],b[100],n;
+    printf("enter number of elements: ");
+    scanf("%d",&n);
     printf("enter first array : ");
-    for(int i=0;i<5;i++)
+    for(int i=0;i<n;i++)
     {
         scanf("%d",&a[i]);
     }
     printf("enter second array : ");
-    for(int i=0;i<5;i++)
+    for(int i=0;i<n;i++)
     {
         scanf("%d",&b[i]);
     }
     int temp;
-    for(int i=0;i<5;i++)
+    for(int i=0;i<n;i++)
     {
         temp=a[i];
         a[i]=b[i];
         b[i]=temp;
     }
     printf("elements of first array after swapping are : ");
-    for(int i=0;i<5;i++)
+    for(int i=0;i<n;i++)
     {
         printf("%d ",a[i]);
     }
     printf("\n");
     printf("elements of second array after swapping are : ");
-    for(int i=0;i<5;i++)
+    for(int i=0;i<n;i++)
     {
         printf("%d ",b[i]);
     }
@@ -163,17 +175,19 @@ Question 6: //WAP in C to perform linear search
 
 int main()
 {
-    int a[5],n,flag=0;
+    int a[100],num,n,flag=0;
+    printf("enter number of elements: ");
+    scanf("%d",&n);
     printf("enter array : ");
-    for(int i=0;i<5;i++)
+    for(int i=0;i<n;i++)
     {
         scanf("%d",&a[i]);
     }
     printf("enter no. to be searched : ");
-    scanf("%d",&n);
-    for(int i=0;i<5;i++)
+    scanf("%d",&num);
+    for(int i=0;i<n;i++)
     {
-        if(a[i]==n)
+        if(a[i]==num)
         {
             flag=1;
             break;
@@ -197,14 +211,16 @@ Question 7: //WAP in C to calculate sum of elements available at even index
 
 int main()
 {
-    int a[5];
+    int a[100],n;
+    printf("enter number of elements: ");
+    scanf("%d",&n);
     printf("enter array : ");
-    for(int i=0;i<5;i++)
+    for(int i=0;i<n;i++)
     {
         scanf("%d",&a[i]);
     }
     int sum=0;
-    for(int i=0;i<5;i++)
+    for(int i=0;i<n;i++)
     {
         if(i%2==0)
         {
@@ -224,9 +240,11 @@ Question 8: //WAP in C to calculate sum of even and odd values
 
 int main()
 {
-    int a[5],s1=0,s2=0;
+    int a[100],s1=0,s2=0;
+    printf("enter number of elements: ");
+    scanf("%d",&n);
     printf("enter array : ");
-    for(int i=0;i<5;i++)
+    for(int i=0;i<n;i++)
     {
         scanf("%d",&a[i]);
         if(a[i]%2==0)
