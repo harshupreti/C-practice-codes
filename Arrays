@@ -1,0 +1,251 @@
+Question 1: //WAP in C to find second largest element of an array
+
+#include <stdio.h>
+
+int main()
+{
+    int a[5];
+    printf("enter elements of array : ");
+    for(int i=0;i<5;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    int second =a[0], largest = a[0];
+    for(int i=0;i<5;i++)
+    {
+        if(a[i]>largest)
+        {
+            second = largest;
+            largest = a[i];
+        }
+    }
+    printf("second largest element is : %d",second);
+
+    return 0;
+}
+
+Question 2: //WAP in C to count even and odd numbers
+
+#include <stdio.h>
+
+int main()
+{
+    int a[5];
+    printf("enter elements of array : ");
+    for(int i=0;i<5;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    int c1=0,c2=0;
+    for(int i=0;i<5;i++)
+    {
+        if(a[i]%2==0)
+        {
+            c1++;
+        }
+        else
+        {
+            c2++;
+        }
+    }
+    printf("Even : %d Odd : %d",c1,c2);
+
+    return 0;
+}
+
+Question 3: //WAP in C to count positive,negative and zeros in a 1d array
+
+#include <stdio.h>
+
+int main()
+{
+    int a[5];
+    printf("enter elements of array : ");
+    for(int i=0;i<5;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    int c1=0,c2=0,c3=0;
+    for(int i=0;i<5;i++)
+    {
+        if(a[i]>0)
+        {
+            c1++;
+        }
+        else if(a[i]==0)
+        {
+            c2++;
+        }
+        else 
+        {
+            c3++;   
+        }
+    }
+    printf("Positive : %d Zeros : %d Negative : %d",c1,c2,c3);
+
+    return 0;
+}
+
+Question 4: //WAP in C to store sum of two 1d arrays into third array
+
+#include <stdio.h>
+
+int main()
+{
+    int a[5],b[5];
+    printf("enter first array : ");
+    for(int i=0;i<5;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("enter second array : ");
+    for(int i=0;i<5;i++)
+    {
+        scanf("%d",&b[i]);
+    }
+    printf("elements of third array are : ");
+    int c[5];
+    for(int i=0;i<5;i++)
+    {
+        c[i]=a[i]+b[i];
+        printf("%d ",c[i]);
+    }
+    
+    
+
+    return 0;
+}
+
+Question 5: //WAP in C to swap elements of 2 1d arrays
+
+#include <stdio.h>
+
+int main()
+{
+    int a[5],b[5];
+    printf("enter first array : ");
+    for(int i=0;i<5;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("enter second array : ");
+    for(int i=0;i<5;i++)
+    {
+        scanf("%d",&b[i]);
+    }
+    int temp;
+    for(int i=0;i<5;i++)
+    {
+        temp=a[i];
+        a[i]=b[i];
+        b[i]=temp;
+    }
+    printf("elements of first array after swapping are : ");
+    for(int i=0;i<5;i++)
+    {
+        printf("%d ",a[i]);
+    }
+    printf("\n");
+    printf("elements of second array after swapping are : ");
+    for(int i=0;i<5;i++)
+    {
+        printf("%d ",b[i]);
+    }
+    
+    
+
+    return 0;
+}
+
+Question 6: //WAP in C to perform linear search 
+
+#include <stdio.h>
+
+int main()
+{
+    int a[5],n,flag=0;
+    printf("enter array : ");
+    for(int i=0;i<5;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("enter no. to be searched : ");
+    scanf("%d",&n);
+    for(int i=0;i<5;i++)
+    {
+        if(a[i]==n)
+        {
+            flag=1;
+            break;
+        }
+    }
+    if(flag)
+    {
+        printf("No. is found \n");
+    }
+    
+    else{
+    printf("No. is not found");
+    }
+    
+    return 0;
+}
+
+Question 7: //WAP in C to calculate sum of elements available at even index 
+
+#include <stdio.h>
+
+int main()
+{
+    int a[5];
+    printf("enter array : ");
+    for(int i=0;i<5;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    int sum=0;
+    for(int i=0;i<5;i++)
+    {
+        if(i%2==0)
+        {
+            sum+=a[i];
+        }
+    }
+    
+    printf("Sum is : %d",sum);
+    
+    
+    return 0;
+}
+
+Question 8: //WAP in C to calculate sum of even and odd values
+
+#include <stdio.h>
+
+int main()
+{
+    int a[5],s1=0,s2=0;
+    printf("enter array : ");
+    for(int i=0;i<5;i++)
+    {
+        scanf("%d",&a[i]);
+        if(a[i]%2==0)
+        {
+            s1+=a[i];
+        }
+        else
+        {
+            s2+=a[i];
+        }
+        
+    }
+    
+    
+    printf("Sum of even values : %d \n",s1);
+    printf("Sum of odd values : %d ",s2);
+    
+    
+    return 0;
+}
+
+Question 9: 
