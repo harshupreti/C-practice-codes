@@ -1,0 +1,1345 @@
+Question 1: // WAP in C to add two numbers 
+
+#include <stdio.h>
+
+// Driver code
+
+int main()
+{
+    int a,b;
+    printf("Enter two numbers : ");
+    scanf("%d%d", &a, &b);
+    
+    printf("Sum of %d and %d is : %d ", a, b, a+b);
+    
+    return 0;
+}
+
+Question 2: // WAP in C to add three numbers 
+
+#include <stdio.h>
+
+// Driver code
+
+int main()
+{
+    int a,b,c;
+    printf("Enter three numbers : ");
+    scanf("%d%d%d", &a, &b, &c);
+    
+    printf("Sum of %d %d and %d is : %d ", a, b, c, a+b+c);
+    
+    return 0;
+}
+
+Question 3: // WAP in C to find area of circle 
+
+#include <stdio.h>
+
+// Defining the value of pi as 3.14
+
+#define pi 3.14
+
+// Driver code
+
+int main()
+{
+    int r;
+    printf("Enter radius of circle : ");
+    scanf("%d", &r);
+    
+    printf("Area of circle is : %f ", pi*r*r);
+    
+    return 0;
+}
+
+Question 4: // WAP in C to calculate simple interest 
+
+#include <stdio.h>
+
+// Driver code
+
+int main()
+{
+    int T;
+    float P, R, SI;
+    
+    printf("Enter Principal amount : ");
+    scanf("%f", &P);
+    
+    printf("Enter Rate of interest : ");
+    scanf("%f", &R);
+    
+    printf("Enter Time in years : ");
+    scanf("%d", &T);
+    
+    printf("Simple Interest is : %f ", P*R*T/100);
+    
+    return 0;
+}
+
+Question 5: // WAP in C to print a block F using hash(#), where the F has a height 
+            // of six characters and a width of five and four characters
+
+#include <stdio.h>
+
+// Driver code
+
+int main()
+{
+        printf("#####\n");
+	printf("#\n");
+	printf("####\n");
+	printf("#\n");
+	printf("#\n");
+	printf("#\n");
+	
+	return 0;
+}
+
+Question 6: // WAP in C that accepts two items' weight (floating point values) and number of 
+            // purchase (floating point values) and calculate the average value of the items
+
+#include <stdio.h>
+
+// Driver code
+
+int main()
+{
+    float w1, w2, n1, n2, average;
+    printf("Enter weight of first item : ");
+    scanf("%f", &w1);
+    
+    printf("Enter weight of second item : ");
+    scanf("%f", &w2);
+    
+    printf("Enter number of purchases for first item : ");
+    scanf("%f", &n1);
+    
+    printf("Enter number of purchases for second item : ");
+    scanf("%f", &n2);
+    
+    average = ( (w1*n1) + (w2*n2) ) / (n1+n2);
+    
+    printf("The average value of the items is : %f", average);
+	
+	return 0;
+}
+
+Question 7: // WAP in C to swap two numbers using a third variable
+
+#include <stdio.h>
+
+// Driver code
+
+int main()
+{
+    int a, b, temp;
+    printf("Enter two numbers : ");
+    scanf("%d%d", &a, &b);
+   
+    temp=a;
+    a=b;
+    b=temp;
+    
+    printf("The numbers after swapping are : %d and %d", a, b);
+	
+	return 0;
+}
+
+Question 8: // WAP in C to swap two numbers without using a third variable
+
+#include <stdio.h>
+
+// Driver code
+
+int main()
+{
+    int a, b;
+    printf("Enter two numbers : ");
+    scanf("%d%d", &a, &b);
+   
+    a = a+b;
+    b = a-b;
+    a = a-b;
+    
+    printf("The numbers after swapping are : %d and %d", a, b);
+	
+	return 0;
+}
+
+Question 9: /*WAP to convert celsius to fahrenheit */
+
+#include<stdio.h>
+
+int main()
+{
+    float c;
+    printf("enter temperature in celsius \n");
+    scanf("%f",&c);
+    printf("the temperature in fahrenheit is %f",(c*1.8)+32);
+    
+    return 0;
+    
+}
+
+Question 10: //WAP to convert seconds into hours, minutes and seconds 
+
+#include<stdio.h>
+
+int main() 
+{
+    int seconds,hours,minutes;
+    printf("enter seconds\n");
+    scanf("%d",&seconds);
+    
+    hours=seconds/3600;
+    minutes=(seconds%3600)/60;
+    seconds=((seconds%3600)%60);
+    
+    printf("hours=%d\n",hours);
+    printf("minutes=%d\n",minutes);
+    printf("seconds=%d\n",seconds);
+    
+    return 0;
+}
+
+Question 11: //WAP to convert specified days into years, months and days 
+
+#include<stdio.h>
+
+int main()
+{
+    int days, weeks, years;
+    printf("enter number of days \n");
+    scanf("%d",&days);
+    
+    years=days/365;
+    weeks=(days%365)/7;
+    days=((days%365)%7);
+    printf("the number of years is %d \n",years);
+    printf("the number of weeks is %d \n",weeks);
+    printf("the number of days is %d",days);
+    
+    return 0;
+}
+
+Question 12: //WAP to check whether a number is even or odd 
+
+#include<stdio.h>
+
+int main()
+{
+    int a;
+    printf("enter a number \n");
+    scanf("%d",&a);
+    
+    if(a%2==0)
+    {
+    printf("even");
+    }
+    else
+    {
+    printf("odd");
+    }
+    return 0;
+}
+
+Question 13: //WAP to check whether a given year is leap year or not 
+
+#include<stdio.h>
+
+int main()
+{
+    int year;
+    printf("enter year \n");
+    scanf("%d",&year);
+    
+    if(year%4==0)
+    {
+    printf("it is a leap year\n");
+    }
+    else
+    {
+    printf("it is not a leap year");
+    }
+    
+    return 0;
+}
+
+Question 14: //WAP TO CHECK WHETHER A TRIANGLE IS EQUILATERAL, SCALENE OR ISOSCELES
+
+#include <stdio.h>
+
+int main()
+{
+    
+    int a,b,c;
+    printf("Enter Sides of triangle\n");
+    scanf("%d%d%d",&a,&b,&c);
+   
+    if(a==b && b==c && c==a)
+    {
+        printf("The triangle is equilateral");
+    }
+    else if(a!=b && b!=c && c!=a)
+    {
+        printf("The triangle is scalene");
+    }
+    else{
+        printf("The triangle is isosceles");
+    }
+    return 0;
+}
+
+Question 15: //WRITE A C PROGRAM TO CHECK WHETHER A TRIANGLE IS RIGHT ANGLED, OBTUSE OR ACUTE TRIANGLE
+
+#include <stdio.h>
+
+int main()
+{
+    int a,b,c;
+    printf("enter the angles\n");
+    scanf("%d%d%d",&a,&b,&c);
+    if((a+b+c)==180)
+    {
+    if(a==90 || b==90 || c==90)
+    {
+        printf("The triangle is right angled");
+    }
+    else if(a>90 || b>90 || c>90)
+    {
+        printf("The triangle is obtuse angled");
+    }
+    else if(a<90 && b<90 && c<90)
+    {
+        printf("The triangle is acute angled");
+    }
+    }
+    else
+    {
+    printf("Error : The sum of angles is not equal to 180");
+    }
+    
+    return 0;
+}
+
+Question 16: //WAP TO CHECK IF A CHARACTER IS AN ALPHABET OR DIGIT
+
+#include <stdio.h>
+
+int main()
+{
+    char ch;
+    printf("enter the character\n");
+    scanf("%c",&ch);
+    if (ch>='0' && ch<='9')
+    {
+        printf("It is a digit");
+        
+    }
+    else if (ch>='a' && ch<='z' || ch>='A' && ch<='Z')
+    {
+        printf("It is an alphabet");
+        
+    }
+    else
+    {
+        printf("It is neither an alphabet nor a digit");
+    }
+    return 0;
+}
+
+Question 17: //WAP TO CHECK IF A CHARACTER IS A VOWEL OR CONSONANT
+
+#include <stdio.h>
+
+int main()
+{
+    char ch;
+    printf("enter the character\n");
+    scanf("%c",&ch);
+    if (ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u' || ch=='A' || ch=='E'|| ch=='O'|| ch=='I'||
+    ch=='U')
+    {
+        printf("It is a vowel");
+        
+    }
+    else
+    {
+        printf("It is a consonant");
+        
+    }
+    return 0;
+}
+
+Question 18: //WAP TO FIND SMALLEST OF TWO NUMBERS
+
+#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    printf("enter two numbers\n");
+    scanf("%d%d",&a,&b);
+    
+    if (a<b)
+    {
+        printf("%d is smallest",a);
+        
+    }
+    else
+    {
+        printf("%d is smallest",b);
+        
+    }
+    
+    return 0;
+}
+
+Question 19: //WAP to find largest of three numbers 
+
+#include<stdio.h>
+
+int main()
+{
+    int a,b,c;
+    printf("enter three numbers \n");
+    scanf("%d%d%d",&a,&b,&c);
+    
+    if(a>b && a>c)
+    {
+    printf("%d is greatest",a);
+    }
+    else if(b>a && b>c)
+    {
+    printf("%d is greatest",b);
+    }
+    else
+    {
+    printf("%d is greatest",c);
+    }
+    return 0;
+}
+
+Question 20: //WAP in C to make a calculator
+
+#include <stdio.h>
+
+int main()
+{
+    int a,b,choice;
+    printf("enter two numbers : ");
+    scanf("%d%d",&a,&b);
+    printf("Choose the operation to perform\n");
+    printf("1. Addition\n");
+    printf("2. Subtraction\n");
+    printf("3. Division\n");
+    printf("4. Multiplication\n");
+    scanf("%d",&choice);
+    
+    switch(choice)
+    {
+        case 1:
+                printf("The sum is : %d",a+b);
+                break;
+        
+        case 2: 
+                printf("The difference is : %d",a-b);
+                break;
+        
+        case 3: 
+                printf("The quotient is : %d",a/b);
+                break;
+        
+        case 4: 
+                printf("The product is : %d",a*b);
+                break;
+        
+    }
+
+    return 0;
+}
+
+Question 21: //WAP to find roots of a quadratic equation
+
+# include<stdio.h>
+# include<math.h>
+
+int main()
+{
+   float a,b,c,r1,r2,d;
+   printf ("enter the values of a b c : ");
+   scanf ("%f%f%f",&a,&b,&c);
+   
+   d= b*b-4*a*c;
+   
+   if (d>0)
+   {
+      r1 =(-b+sqrt(d))/(2*a);
+      r2 =(-b-sqrt(d))/(2*a);
+      printf ("The real roots :  %f %f", r1, r2);
+   }
+   else if (d==0)
+   {
+      r1 = -b/(2*a);
+      r2 = -b/(2*a);
+      printf ("roots are equal : %f %f", r1, r2);
+   }
+   else
+      printf("Roots are imaginary");
+   return 0;
+}
+
+Question 22: //WAP to accept a coordinate point in a XY coordinate system and determine in which 
+//quadrant the coordinate point lies.
+
+#include <stdio.h>
+
+int main()
+{
+	int x,y;
+
+	printf("enter x and y\n");
+	scanf("%d %d",&x,&y);
+
+	if(x>0 && y>0)
+	{
+	  printf("The coordinate point lies in the First quandrant.");
+	}
+	else if(x<0 && y>0)
+	{
+	  printf("The coordinate point lies in the Second quandrant.");
+	}
+	else if(x<0 && y<0)
+	{
+	  printf("The coordinate point lies in the Third quandrant.");
+	}
+	else if(x>0 && y<0)
+	{
+	  printf("The coordinate point lies in the Fourth quandrant.");
+	}
+	
+	return 0;
+}
+
+Question 23: //WAP TO FIND GROSS SALARY OF EMPLOYEE IF DA IS 40% OF BASIC SALARY AND IF RA IS 
+//20% OF BASIC SALARY
+
+#include <stdio.h>
+
+int main()
+{
+    int sal,da,ra,gross;
+    printf("enter base salary\n");
+    scanf("%d",&sal);
+    
+    da=sal*0.4;
+    ra=sal*0.2;
+    gross=sal+da+ra;
+    
+    printf("The gross salary is %d",gross);
+    
+    return 0;
+}
+
+Queston 24: //WAP TO CALCULATE AND PRINT ELECTRICITY BILL, THE CUSTOMER ID, AND UNIT CONSUMED BY THE USER SHOULD BE 
+//TAKEN FROM THE KEYBOARD AND DISPLAY THE TOTAL AMOUNT TO PAY TO THE CUSTOMER
+//UPTO 199, 1.20
+//200-500 1.8 
+//ABOVE 500, 3 
+//IF BILL EXCEEDS RS 400 THEN SURCHARGE OF 15% WILL BE CHARGED AND MINIMUM BILL SHOULD BE 100/-
+
+#include <stdio.h>
+
+int main()
+{
+    int cid; 
+    float unit, gross;
+    printf("Enter Customer ID:");
+    scanf("%d",&cid);
+    printf("Enter Unit Consumed:");
+    scanf("%f",&unit);
+    
+    printf("The Customer ID is : %d\n",cid);
+    if(unit<=199)
+    {
+        gross=unit*1.2;
+        if(gross<100)
+        {
+            printf("The gross bill is : 100");
+        }
+        else
+        {
+            printf("The gross bill is : %f",gross);
+        }
+    }
+
+    else if(unit>=200 & unit<=500)
+    {
+        gross=unit*1.8;
+        if(gross>400)
+        {
+            gross=gross+(gross*0.15);
+            printf("The gross bill is:%f\n",gross);
+        }
+        else
+        {
+            printf("The gross bill is:%f\n",gross);
+        }
+    }
+    
+    else if(unit>500)
+    {
+        gross=unit*3;
+        if(gross>400)
+        {
+            gross=gross+(gross*0.15);
+            printf("The gross bill is:%f\n",gross);
+        }
+    }
+    return 0;
+    
+}
+
+Question 25: //A library charges a fine for every book returned late. For first 5 days the fine is 50 paisa,
+// for 6-10 days, fine is one rupee and above 10 days, fine is 5 rupees. If you return the book 
+//after 30 days your membership will be cancelled. Write a program to accept the number of days 
+//the member is late to return the book and display the fine or appropriate message.
+
+#include <stdio.h>
+
+int main()
+{
+	int a;
+
+	printf("enter number of days\n");
+	scanf("%d",&a);
+
+	if(a<5) 
+	{
+	  printf("your fine is %f rupees",a*0.5);
+	}
+	else if(a>5 && a<=10)
+	{
+	  printf("your fine is %d rupees.",a*1);
+	}
+	else if(a>10 && a<=30)
+	{
+	  printf("your fine is %d rupees.",a*5);
+	}
+	else if( a > 30)
+	{
+	  printf("your membership is cancelled");
+	}
+	return 0;
+}
+	  
+Question 26: //WAP to find the factorial of any number
+#include <stdio.h>
+
+int main()
+{
+    int a,n=1,fact=1;
+    printf("Enter a number : ");
+    scanf("%d",&a);
+    
+    while(n<=a)
+    {
+        fact = fact*n;
+        n++;
+    }
+    printf("Factorial is %d",fact);
+    return 0;
+}
+
+Question 27: //WAP to print fibonnaci series and its sum
+#include <stdio.h>
+
+int main()
+{
+    int a=0,b=1,c,n,i,sum=0;
+    printf("Enter number of terms : ");
+    scanf("%d",&n);
+    printf("Fibonacci series is : ");
+    
+    for(i=1;i<=n;i++)
+    {
+        printf("%d ",a);
+        sum+=a;
+        c=a+b;
+        a=b;
+        b=c;
+    }
+    printf("\n");
+    printf("sum of series is : %d",sum);
+    return 0;
+}
+
+Question 28: //WAP to swap two numbers without using arithmetic or third variable
+
+#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    printf("enter two numbers \n");
+    scanf("%d%d",&a,&b);
+    a=a^b;
+    b=a^b;
+    a=a^b;
+    printf("The swapped digits are %d %d",a,b);
+    return 0;
+}
+
+Queston 29: //WAP to accept an integer and find sum of digits
+
+#include <stdio.h>
+
+int main()
+{
+    int n,remainder,sum=0;
+    printf("enter number \n");
+    scanf("%d",&n);
+    
+    while(n!=0)
+    {
+        remainder = n%10;
+        sum = sum+remainder;
+        n=n/10;
+    }
+    printf("sum of digits is %d",sum);
+    return 0;
+}
+
+Question 30: //WAP to accept an integer and find reverse of this number
+
+#include <stdio.h>
+
+int main()
+{
+    int n,remainder,reverse=0;
+    printf("enter number \n");
+    scanf("%d",&n);
+    
+    while(n!=0)
+    {
+        remainder = n%10;
+        reverse = reverse*10+remainder;
+        n=n/10;
+    }
+    printf("reversed number is %d",reverse);
+    return 0;
+}
+
+Question 31://WAP to check whether a number is armstrong or not
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int n=0,c,a,remainder,arm=0;
+    printf("Enter a number : ");
+    scanf("%d",&a);
+    c=a;
+    for(c=a;c>0;n++)
+    {
+        c/=10;
+        
+    }
+    
+    for(c=a;c>0;c/=10)
+    {
+        remainder=c%10;
+        arm+=pow(remainder,n);
+       
+    }
+    if(arm==a)
+    {
+        printf("%d is an Armstrong number",a);
+    }
+    else
+    {
+        printf("%d is not an armstrong number",a);
+    }
+    return 0;
+}
+
+Question 32: //WAP to check whether a number is perfect or not 
+
+#include <stdio.h>
+
+int main()
+{
+    int n,sum=0;
+    printf("Enter a number : ");
+    scanf("%d",&n);
+    
+    for(int i=1;i<n;i++)
+    {
+        if(n%i==0)
+        {
+            sum+=i;
+        }
+        
+    }
+    
+    
+    if(sum==n)
+    {
+        printf("%d is a perfect number",n);
+    }
+    else
+    {
+        printf("%d is not a perfect number",n);
+    }
+    return 0;
+}
+
+Question 33: //WAP to find sum of following series : S = 2+4+6+8+…..N terms
+#include <stdio.h>
+
+int main()
+{
+    int n,a=2,sum=0;
+    printf("Enter number of terms : ");
+    scanf("%d",&n);
+    
+    for(int i=1;i<=n;i++)
+    {
+        sum+=a;
+        a+=2;
+    }
+    
+    printf("sum of series is : %d",sum);
+    return 0;
+}
+
+Question 34: // WAP to check whether a number is prime or not
+
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    printf("Enter number : ");
+    scanf("%d",&a);
+    
+    int n = 2;
+    
+    while(n<a)
+    {
+        if(a%n==0)
+        {
+            printf("Not Prime");
+            return 0;
+        }
+        else
+        {
+            n=n+1;
+        }
+    }
+    printf("Prime");
+
+    return 0;
+}
+
+Question 35: Question 35: /*Write a program to find the sum of following series:
+1 – 1/2 + 1/3 – 1/4 + 1/5 - …… up to n terms.*/
+
+#include <stdio.h>
+int sum(int n);
+int main()
+{
+    int n;static float sum=0;
+    printf("enter number of terms: ");
+    scanf("%d",&n);
+    int a=1;
+    for(int i=0;i<n;i++)
+    {
+        if(a%2==0)
+        {
+            sum=sum-((float) 1/a);
+            a++;
+        }
+        else
+        {
+        sum=sum+((float) 1/a);
+        a++;
+        }
+    }
+    printf("the sum is %f",sum);
+
+    return 0;
+}
+
+Question 36: //WAP to find sum of series : 1!+2!+3!+4!+...+n!
+#include <stdio.h>
+
+int factorial(int n) {
+    int fact=1;
+    for(int i=n;i>1;i--)
+    {
+        fact*=i;
+    }
+    return fact;
+}
+int main()
+{
+    int n,sum=0,fact;
+    printf("Enter number of terms : ");
+    scanf("%d",&n);
+    
+    for(int i=1;i<=n;i++)
+    {
+        fact = factorial(i);
+        sum+=fact;
+    }
+    
+    printf("sum of series is : %d",sum);
+    return 0;
+}
+
+Question 38: //WAP to find sum of series : 1/1!+2/2!+3/3!+4/4!+... upto 7 terms
+#include <stdio.h>
+int factorial(int n) {
+    int fact=1;
+    for(int i=n;i>1;i--)
+    {
+        fact*=i;
+    }
+    return fact;
+}
+int main()
+{
+    int n;
+    float fact,a,sum=0;
+    printf("Enter number of terms : ");
+    scanf("%d",&n);
+    
+    for(int i=1;i<=n;i++)
+    {
+        fact = factorial(i);
+        a=i/fact;
+        sum+=a;
+    }
+    
+    printf("sum of series is : %f",sum);
+    return 0;
+}
+
+Question 39: /*Write a program to convert binary number to decimal number.*/
+#include <stdio.h>
+#include <math.h>
+int sum(int n);
+int main()
+{
+    int n,sum=0,remainder;
+    printf("enter binary number: ");
+    scanf("%d",&n);
+    int a=0;
+    while(n>0)
+    {
+        remainder=n%10;
+        sum+= (remainder*pow(2,a));
+        n=n/10;
+        a++;
+    }
+    printf("the sum is %d",sum);
+
+    return 0;
+}
+
+Question 40: /*Write a program to find the sum of following series:
+S = 1^4 + 3^4 + 5^4 + 7^4 + …………….. 100 terms*/
+#include <stdio.h>
+#include <math.h>
+int sum(int n);
+int main()
+{
+    int n,sum=0;
+    printf("enter number of terms: ");
+    scanf("%d",&n);
+    int a=1;
+    for(int i=0;i<n;i++)
+    {
+        sum+=pow(a,4);
+        a=a+2;
+    }
+    printf("the sum is %u",sum);
+
+    return 0;
+}
+
+Question 41: /*Write a program in C to print the following pattern:
+* * *
+* * *
+* * *        */
+
+#include <stdio.h>
+
+int main()
+{
+    int i,j;
+    
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            printf("*\t");
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+
+Question 42: /*Write a program in C to print the following pattern:
+1 2 3
+1 2 3
+1 2 3        */
+
+#include <stdio.h>
+
+int main()
+{
+    int i,j;
+    
+    for(i=1;i<=3;i++)
+    {
+        for(j=1;j<=3;j++)
+        {
+            printf("%d\t",j);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+
+Question 43: /*Write a program in C to print the following pattern:
+1 1 1
+2 2 2
+3 3 3        */
+
+//Pattern 3
+
+#include <stdio.h>
+
+int main()
+{
+    int i,j;
+    
+    for(i=1;i<=3;i++)
+    {
+        for(j=1;j<=3;j++)
+        {
+            printf("%d\t",i);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+
+Question 44: /*Write a program in C to print the following pattern:
+3 2 1
+3 2 1
+3 2 1  	     */
+
+#include <stdio.h>
+
+int main()
+{
+    int i,j;
+    
+    for(i=1;i<=3;i++)
+    {
+        for(j=3;j>=1;j--)
+        {
+            printf("%d\t",j);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+
+Question 45: /*Write a program in C to print the following pattern:
+3 3 3
+2 2 2
+1 1 1        */
+
+#include <stdio.h>
+
+int main()
+{
+    int i,j;
+    
+    for(i=3;i>=1;i--)
+    {
+        for(j=1;j<=3;j++)
+        {
+            printf("%d\t",i);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+
+Question 46: /*. Write a program in C to print the following pattern:
+*
+* *
+* * *        */
+
+#include <stdio.h>
+
+int main()
+{
+    int i,j;
+    for(i=1;i<=3;i++)
+    {
+        for(j=1;j<=i;j++)
+        {printf("*\t");
+        
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+
+Question 47: /*Write a program in C to print the following pattern:
+1
+1 2
+1 2 3	     */
+
+#include <stdio.h>
+
+int main()
+{
+    int i,j;
+    for(i=1;i<=3;i++)
+    {
+        for(j=1;j<=i;j++)
+        {printf("%d\t",j);
+        
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+
+Question 48: /*Write a program in C to print the following pattern:
+1
+2 2
+3 3 3        */
+
+#include <stdio.h>
+
+int main()
+{
+    int i,j;
+    for(i=1;i<=3;i++)
+    {
+        for(j=1;j<=i;j++)
+        {printf("%d\t",i);
+        
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+
+Question 49: /*Write a program in C to print the following pattern:
+3
+3 2
+3 2 1	     */
+
+#include <stdio.h>
+
+int main()
+{
+    int i,j;
+    for(i=1;i<=3;i++)
+    {
+        for(j=1;j<=i;j++)
+        {printf("%d\t",4-j);
+        
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+
+Question 50: /*Write a program in C to print the following pattern:
+3
+2 2
+1 1 1	     */
+
+#include <stdio.h>
+
+int main()
+{
+    int i,j;
+    for(i=1;i<=3;i++)
+    {
+        for(j=1;j<=i;j++)
+        {printf("%d\t",4-i);
+        
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+
+Question 51: /*Write a program in C to print the following pattern:
+*
+* * *
+* * * * *
+* * * * * * *       */
+
+
+
+
+****Question : // WAP to print prime numbers till N
+
+#include <stdio.h>
+
+int main()
+{
+    int N;
+    printf("Enter number : ");
+    scanf("%d",&N);
+    
+    int num = 2;
+    while(num<=N)
+    {
+        int divi=2;
+    while(divi<num)
+    {
+        if(num%divi==0)
+        {
+            num=num+1;
+            
+        }
+        else
+        {
+            divi=divi+1;
+        }
+    }
+    printf("%d ",num);
+    num=num+1;
+    }
+    
+
+    return 0;
+}
+
+Question : //WAP in C to find second largest in an array 
+
+
+#include <stdio.h>
+
+int main()
+{
+    int a[5];
+    printf("enter numbers of array : ");
+    for(int i=0;i<5;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    int second=a[0],largest=a[0];
+    for(int i=1;i<5;i++)
+    {
+        if(a[i]>largest)
+        {
+        second = largest;
+        largest=a[i];
+        }
+        
+    }
+    printf("second largest is : %d",second);
+    
+    return 0;
+}
+
+Question : //WAP in C to find smallest number in an array 
+
+#include <stdio.h>
+
+int main()
+{
+    int a[5];
+    printf("enter numbers of array : ");
+    for(int i=0;i<5;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    int smallest=a[0];
+    for(int i=1;i<5;i++)
+    {
+        if(smallest>a[i])
+        {
+        smallest=a[i];
+        }
+    }
+    printf("smallest number is : %d",smallest);
+    
+    return 0;
+}
+
+Question : //WAP in C to reverse elemnts of an array
+
+#include <stdio.h>
+
+int main()
+{
+    int a[5];
+    printf("enter numbers of array : ");
+    for(int i=0;i<5;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("The reverse of the array is : ");
+    for(int i=4;i>=0;i--)
+    {
+        printf("%d ",a[i]);
+    }
+    
+    
+    return 0;
+}
+
+
+Question : //WAP in C to find second largest element of an array
+
+#include <stdio.h>
+
+int main()
+{
+    int a[5];
+    printf("enter elements of array : ");
+    for(int i=0;i<5;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    int second =a[0], largest = a[0];
+    for(int i=0;i<5;i++)
+    {
+        if(a[i]>largest)
+        {
+            second = largest;
+            largest = a[i];
+        }
+    }
+    printf("second largest element is : %d",second);
+
+    return 0;
+}
