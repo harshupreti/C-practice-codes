@@ -1,0 +1,472 @@
+1:  //WAP in C to input and print an array using pointers
+#include <stdio.h>
+ 
+int main()
+{
+    int a[5];
+    int *p,i=0;
+    p=a;
+    printf("enter elements of array : ");
+    for(i=0;i<5;i++)
+    {
+    scanf("%d",p);
+    p++
+    }
+    p=a;
+    for(i=0;i<5;i++)
+    {
+        printf("%d ",*p);
+        
+        p++;
+    }
+    
+    
+    return 0;
+}
+2: //WAP in C to add 2 no.s using pointers
+#include <stdio.h>
+ 
+int main()
+{
+    int a=10,b=5;
+    int *p,*q;
+    p=&a;q=&b;
+    printf("The sum is : %d ",*p+*q);
+   
+return 0;
+}
+
+3: //WAP in C to swap 2 no.s using pointers
+#include <stdio.h>
+ 
+int main()
+{
+    int a=10,b=5,t;
+    int *p,*q;
+    p=&a;q=&b;
+    
+    //Logic
+    t=*p;*p=*q;*q=t;
+    
+    
+    printf("The nos are : %d %d ",a,b);
+   
+    
+    
+    return 0;
+}
+
+    
+    return 0;
+}
+
+4:  //WAP in C to to copy one array to another using pointers.
+#include <stdio.h>
+ 
+int main()
+{
+    int a[5],b[5];
+    int *p,*q,i;
+    p=a;
+    q=b;
+    printf("enter elements of array : ");
+    for(i=0;i<5;i++)
+    {
+    scanf("%d",p);
+    p++;
+    }
+    p=a;
+    printf("original array is : ");
+    for(i=0;i<5;i++)
+    {
+        printf("%d ",*p);
+        p++;
+    }
+    printf("\n");
+    p=a;
+    for(i=0;i<5;i++)
+    {
+        *q=*p;
+        p++;
+        q++;
+    }
+    q=b;
+    printf("New array is : ");
+    for(i=0;i<5;i++)
+    {
+        printf("%d ",*q);
+        q++;
+    }
+    
+    
+    return 0;
+}
+
+5:  //WAP in C to to swap 2 arrays using pointers.
+#include <stdio.h>
+ int print(int *x)
+ {
+     for(int i=0;i<5;i++)
+     {
+     printf("%d ",*x);
+     x++;
+     }
+ }
+int main()
+{
+    int a[5],b[5];
+    int *p,*q,i,t;
+    p=a;
+    q=b;
+    
+    printf("enter elements of first array : ");
+    for(i=0;i<5;i++)
+    {
+    scanf("%d",p);
+    p++;
+    }
+    
+    printf("\n");
+    
+    printf("enter elements of second array : ");
+    for(i=0;i<5;i++)
+    {
+    scanf("%d",q);
+    q++;
+    }
+    
+    printf("\n");
+    
+    p=a;
+    q=b;
+    
+    for(i=0;i<5;i++)
+    {
+        t=*p;*p=*q;*q=t;
+        p++;
+        q++;
+    }
+    
+    p=a;
+    q=b;
+    
+    printf("elements of first array after swapping : ");
+    print(p);
+    
+    printf("\n");
+    
+    printf("elements of second array after swapping : ");
+    print(q);
+    
+    
+    return 0;
+}
+
+6: //WAP in C to reverse an array using pointers.
+#include <stdio.h>
+ 
+int main()
+{
+    int a[5];
+    int *p,i;
+    p=a;
+    
+    
+    printf("enter elements of original array : ");
+    for(i=0;i<5;i++)
+    {
+    scanf("%d",p);
+    p++;
+    }
+    
+    printf("\n");
+
+    printf(" reversed array is : ");
+    for(i=0;i<5;i++)
+    {
+        p--;
+        printf("%d ",*p);
+        
+    }
+    
+    
+    
+    return 0;
+}
+
+7:  //WAP in C to search an element in array using pointers
+#include <stdio.h>
+ 
+int main()
+{
+    int a[5];
+    int *p,i,n,b;
+    p=a;
+    
+    
+    printf("enter elements of array : ");
+    for(i=0;i<5;i++)
+    {
+    scanf("%d",p);
+    p++;
+    }
+    printf("enter the number to search : ");
+    scanf("%d",&n);
+    p=a;
+    for(i=0;i<5;i++)
+    {
+        if(*p==n)
+        {
+        printf("No. is found ");
+        b=1;
+        
+        }
+        
+        p++;
+    }
+    if(b!=1)
+    printf("No. is not found");
+    
+    
+    return 0;
+}
+  
+8:  //WAP in C to access two dimensional array using pointers
+#include <stdio.h>
+ 
+int main()
+{
+    int a[5][2];
+    int i,j;
+    
+    
+    
+    printf("enter elements of array : ");
+    for(i=0;i<5;i++)
+    {
+    for(j=0;j<2;j++)
+    {
+        scanf("%d",(*(a+i)+j));
+    }
+    }
+    printf("The 2D array is : \n");
+    for(i=0;i<5;i++)
+    {
+    for(j=0;j<2;j++)
+    {
+        printf("%d ",*(*(a+i)+j));
+    }
+    printf("\n");
+    }
+    
+    
+    return 0;
+}
+
+9:  //WAP in C to add two array using pointers
+#include <stdio.h>
+ 
+int main()
+{
+    int a[5][2],b[5][2],c[5][2];
+    int i,j;
+    
+    
+    printf("enter elements of first array : ");
+    for(i=0;i<5;i++)
+    {
+    for(j=0;j<2;j++)
+    {
+        scanf("%d",(*(a+i)+j));
+    }
+    }
+    
+    printf("\n");
+    
+    printf("enter elements of second array : ");
+    for(i=0;i<5;i++)
+    {
+    for(j=0;j<2;j++)
+    {
+        scanf("%d",(*(b+i)+j));
+    }
+    }
+    
+    printf("\n");
+    
+    for(i=0;i<5;i++)
+    {
+    for(j=0;j<2;j++)
+    {
+        *(*(c+i)+j)=*(*(a+i)+j) + *(*(b+i)+j);
+        
+    }
+    }
+    
+    printf("The sum of two array is : \n");
+    for(i=0;i<5;i++)
+    {
+    for(j=0;j<2;j++)
+    {
+        printf("%d ",*(*(c+i)+j));
+    }
+    printf("\n");
+    }
+    
+    
+    return 0;
+}
+
+10:  //WAP in C to multiply two array using pointers
+#include <stdio.h>
+ 
+int main()
+{
+    int a[3][3],b[3][3],c[3][23];
+    int i,j,k;
+    
+    
+    printf("enter elements of first array : ");
+    for(i=0;i<3;i++)
+    {
+    for(j=0;j<3;j++)
+    {
+        scanf("%d",(*(a+i)+j));
+    }
+    }
+    
+    printf("\n");
+    
+    printf("enter elements of second array : ");
+    for(i=0;i<3;i++)
+    {
+    for(j=0;j<3;j++)
+    {
+        scanf("%d",(*(b+i)+j));
+    }
+    }
+    
+    printf("\n");
+    
+    for(i=0;i<3;i++)
+    {
+        
+    for(j=0;j<3;j++)
+    {
+        int sum=0;
+        for(k=0;k<3;k++)
+        {
+            
+        sum+=*(*(a+i)+k) * *(*(b+k)+j);
+        
+        }
+        *(*(c+i)+j)=sum;
+    }
+        
+    }
+    
+    printf("The product of two array is : \n");
+    for(i=0;i<3;i++)
+    {
+    for(j=0;j<3;j++)
+    {
+        printf("%d ",*(*(c+i)+j));
+    }
+    printf("\n");
+    }
+    
+    
+    return 0;
+}
+
+11:  //WAP in C to find length of string using pointers
+#include <stdio.h>
+ 
+int main()
+{
+    
+    
+    char s[100];
+    char *ptr;
+    ptr=s;
+    printf("enter a string : ");
+    gets(s);
+    int count=0;
+    
+    while(*ptr!='\0')
+    {
+        count++;
+        ptr++;
+    }
+    printf("Length of string is : %d",count);
+    return 0;
+}
+
+12:  //WAP in C to find length of string using pointers
+#include <stdio.h>
+ 
+int main()
+{
+    
+    
+    char s[100],c[100];
+    char *ptr1=s,*ptr2=c;
+    
+    printf("enter a string : ");
+    gets(s);
+    int count=0;
+    
+    while(*ptr1!='\0')
+    {
+        count++;
+        ptr1++;
+    }
+    ptr1=s;
+    for(int i=0;i<count;i++)
+    {
+        *ptr2=*ptr1;
+        ptr1++;
+        ptr2++;
+    }
+    
+    puts(c);
+    
+    return 0;
+}
+
+13: //WAP in C to concatenate 2 string using pointers
+#include <stdio.h>
+ 
+int main()
+{
+    
+    
+    char s[100],c[100];
+    char *ptr1=s,*ptr2=c;
+    
+    printf("enter a string : ");
+    gets(s);
+    
+    printf("enter another string : ");
+    gets(c);
+    
+    while(*ptr1!='\0')
+    {
+        ptr1++;
+        
+        
+    }
+
+    while(*ptr2!='\0')
+    {
+        *ptr1=*ptr2;
+        ptr1++;
+        ptr2++;
+    }
+    
+    puts(s);
+    
+    return 0;
+}
+
+14:  
