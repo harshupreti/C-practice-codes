@@ -1,0 +1,436 @@
+1: //Write a C program to find cube of any number using function.
+#include <stdio.h>
+int cube(int n);
+int main()
+{
+    int n;
+    printf("enter a number to find its cube: ");
+    scanf("%d",&n);
+    printf("cube of %d is %d",n,cube(n));
+
+    return 0;
+}
+
+int cube(int n)
+{
+    int c;
+    c=n*n*n;
+    return c;
+}
+
+2: //Write a C program to find maximum and minimum between two numbers using functions.
+#include <stdio.h>
+int maxmin(int x,int y);
+int main()
+{
+    int x,y;
+    printf("enter two numbers: ");
+    scanf("%d%d",&x,&y);
+    
+    maxmin(x,y);
+
+    return 0;
+}
+
+int maxmin(int x, int y)
+{
+    
+    if(x>y)
+    {
+        printf("%d is max and %d is min",x,y);
+    }
+    else
+    {
+        printf("%d is max and %d is min",y,x);
+    }
+}
+
+3: //Write a C program to find diameter, circumference and area of circle using functions.
+#include <stdio.h>
+void circle();
+int main()
+{
+    circle();
+
+    return 0;
+}
+
+void circle()
+{
+    int r;
+    printf("enter radius: ");
+    scanf("%d",&r);
+    printf("diameter is : %d\ncircumference is : %f\narea is : %f",2*r,2*3.14*r,3.14*r*r);
+}
+
+4: //Write a C program to check whether a number is even or odd using functions.
+
+#include <stdio.h>
+int OddorEven(int x);
+int main()
+{
+    int x;
+    printf("Enter a number to check whether even or odd: ");
+    scanf("%d",&x);
+    
+    OddorEven(x);
+
+    return 0;
+}
+
+int OddorEven(int x)
+{
+    
+    if(x%2==0)
+    printf("%d is even",x);
+    else
+    printf("%d is odd",x);
+}
+
+5: //Write a C program to check whether a number is prime, Armstrong,palindrome or perfect number using functions.
+
+#include <stdio.h>
+#include <math.h>
+void prime();
+void Armstrong();
+void palindrome();
+void perfect();
+int main()
+{
+    prime();
+    Armstrong();
+    palindrome();
+    perfect();
+
+    return 0;
+}
+
+void prime()
+{
+    int n,i,flag=0;
+    printf("enter a number to check if prime: ");
+    scanf("%d",&n);
+    //logic to check for prime
+    for(i=2;i*i<=n;i++)
+    {
+        if(n%i==0)
+        {
+            flag=1;
+        }
+    }
+    
+    
+    if(flag==0)
+    printf("%d is prime\n",n);
+    else
+    printf("%d is not prime\n",n);
+}
+
+void Armstrong()
+{
+    int n,count=0,remainder,a;
+    printf("enter a number to check if Armstrong or not: ");
+    scanf("%d",&n);
+    a=n;
+    //to find number of digits
+    while(a>0)
+    {
+        a=a/10;
+        count++;
+    }
+    int sum=0;
+    a=n;
+    //logic to check if Armstrong or not
+    while(a>0)
+    {
+        remainder=a%10;
+        sum+=pow(remainder,count);
+        a=a/10;
+    }
+    if(sum==n)
+    printf("%d is Armstrong\n",n);
+    else
+    printf("%d is not Armstrong\n",n);
+    
+}
+
+void palindrome()
+{
+    int n,a,remainder,reverse=0;
+    printf("enter a number to check for palindrome: ");
+    scanf("%d",&n);
+    a=n;
+    
+    //logic to check for palindrome
+    while(a>0)
+    {
+        remainder=a%10;
+        reverse=reverse*10+remainder;
+        a=a/10;
+    }
+    if(reverse==n)
+    printf("%d is palindrome\n",n);
+    else
+    printf("%d is not palindrome\n",n);
+    
+}
+
+void perfect()
+{
+    int n,sum=0;
+    printf("enter a number to check if perfect: ");
+    scanf("%d",&n);
+    
+    for(int i=1;i<n;i++)
+    {
+        if(n%i==0)
+        sum+=i;
+    }
+    if(sum==n)
+    printf("%d is perfect",n);
+    else
+    printf("%d is not perfect",n);
+}
+
+6:  //Write a C program to find all prime numbers between given interval using functions.
+#include <stdio.h>
+int checkPrime(int a);
+int printPrime(int n);
+int main()
+{
+    int n;
+    printf("enter number to print prime numbers: ");
+    scanf("%d",&n);
+    printPrime(n);
+}
+
+int checkPrime(int a)
+{
+    int flag=0;
+    for(int i=2;i*i<=a;i++)
+    {
+        if(a%i==0)
+        flag=1;
+    }
+    if(flag==0)
+    printf("%d ",a);
+}
+
+int printPrime(int n)
+{
+    for(int i=2;i<=n;i++)
+    {
+        checkPrime(i);
+    }
+}
+
+7:  //Write a C program to print all strong numbers between given interval using functions.
+#include <stdio.h>
+int fact(int n);
+int strong(int n);
+int main()
+{
+    int n;
+    printf("enter number to print strong numbers: ");
+    scanf("%d",&n);
+    strong(n);
+}
+
+int fact(int n)
+{
+    int i=1,fact=1;
+    while(i<=n)
+    {
+        fact*=i;
+        i++;
+    }
+    return fact;
+}
+
+int strong(int n)
+{
+    int i,remainder,a;
+    
+    for(i=1;i<=n;i++)
+    {
+        a=i;
+        int sum=0;
+        while(a>0)
+        {
+            remainder=a%10;
+            sum+=fact(remainder);
+            a=a/10;
+        }
+        if(sum==i)
+        printf("%d ",i);
+    }
+}
+
+8: //Write a C program to print all Armstrong numbers between given interval using functions.
+#include <stdio.h>
+#include <math.h>
+int Armstrong(int n);
+int main()
+{
+    int n,a;
+    printf("enter number to print Armstrongstrong numbers: ");
+    scanf("%d",&n);
+    
+    Armstrong(n);
+}
+
+
+int Armstrong(int n)
+{
+    
+    int i,remainder,a;
+    
+    
+    for(i=1;i<=n;i++)
+    {
+        int count=0;
+        a=i;
+        while(a>0)
+    {
+        a=a/10;
+        ++count;
+    }
+    a=i;
+        int sum=0;
+        while(a>0)
+        {
+            remainder=a%10;
+            sum+=pow(remainder,count);
+            a=a/10;
+        }
+        if(sum==i)
+        printf("%d ",i);
+    }
+}
+
+9: //Write a program in C to find factorial of a number using recursion
+#include <stdio.h>
+
+int factorial(int n);
+
+int main()
+{
+    int n;
+    printf("enter a number: ");
+    scanf("%d",&n);
+    printf("factorial is %d",factorial(n));
+}
+int factorial(int n)
+{
+    int fact;
+    if(n>=1)
+    return n*factorial(n-1);
+    else
+    return 1;
+    
+}
+
+10: //Write a C program to find power of any number using recursion.
+#include <stdio.h>
+
+int power(int n,int p);
+
+int main()
+{
+    int n,p;
+    printf("enter a number: ");
+    scanf("%d",&n);
+    printf("\nenter power: ");
+    scanf("%d",&p);
+    printf("\npower is %d",power(n,p));
+}
+int power(int n,int p)
+{
+    if(p>0)
+    return n*power(n,p-1);
+    else 
+    return 1;
+}
+
+11: //HCF (NOT MINE. ONLY FOR REFERENCE TEMPORARILY)
+#include <stdio.h>
+
+
+int gcd(int a, int b);
+
+
+int main()
+{
+    int num1, num2, hcf;
+    
+    
+    printf("Enter any two numbers to find GCD: ");
+    scanf("%d%d", &num1, &num2);
+    
+    hcf = gcd(num1, num2);
+    
+    printf("GCD of %d and %d = %d", num1, num2, hcf);
+    
+    return 0;
+}
+
+
+
+int gcd(int a, int b)
+{
+    if(b == 0)
+        return a;
+    else
+        return gcd(b, a%b); 
+}
+
+12: //LCM (NOT MINE. ONLY FOR REFERENCE TEMPORARILY)
+
+
+#include <stdio.h>
+
+int lcm(int a, int b);
+
+
+int main()
+{
+    int num1, num2, LCM;
+
+   
+    printf("Enter any two numbers to find lcm: ");
+    scanf("%d%d", &num1, &num2);
+    
+   
+    if(num1 > num2)
+        LCM = lcm(num2, num1);
+    else
+        LCM = lcm(num1, num2);
+        
+    printf("LCM of %d and %d = %d", num1, num2, LCM);
+    
+    return 0;
+}
+
+
+int lcm(int a, int b)
+{
+    static int multiple = 0;
+    
+    
+    multiple += b;
+    
+    
+    if((multiple % a == 0) && (multiple % b == 0))
+    {
+        return multiple;
+    }
+    else 
+    {
+        return lcm(a, b);
+    }
+}
+
+13: 
+
+
+
