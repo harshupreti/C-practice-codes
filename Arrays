@@ -1,4 +1,4 @@
-Question 1: //WAP in C to find second largest element of an array
+//Question 1: WAP in C to find second largest element of an array
 
 #include <stdio.h>
 #include <limits.h>
